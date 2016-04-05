@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.3" type="template" client="site" method="upgrade">
+    <name>nrgtravel</name>
+    <creationDate>September 2015</creationDate>
+    <author>Created by Cocoon</author>
+    <authorEmail>info@createdbycocoon.com</authorEmail>
+    <authorUrl>http://createdbycocoon.com</authorUrl>
+    <copyright>Copyright 2015</copyright>
+    <license>http://www.gnu.org/licenses/gpl-2.0.html GPLv2 or later</license>
+    <version>1.0</version>
+    <description>This template is a responsive and retina-ready Joomla! template with grid system layout.</description>
+
+    <languages>
+        <language tag="en-GB">language/en-GB.tpl_nrgtravel.ini</language>
+    </languages>
+    <positions>
+        <position>mainmenu</position>
+        <position>footer</position>
+    </positions>
+
+    <files>
+        <file>index.php</file>
+        <file>template_preview.png</file>
+        <file>template_thumbnail.png</file>
+        <file>templateDetails.xml</file>
+        <file>component.php</file>
+        <folder>css/</folder>
+        <folder>features/</folder>
+        <folder>fonts/</folder>
+        <folder>html/</folder>
+        <folder>images/</folder>
+        <folder>js/</folder>
+        <folder>layout/</folder>
+        <folder>sppagebuilder/</folder>
+    </files>
+    <config>
+        <fields name="params">
+
+            <fieldset name="basic" addfieldpath="/plugins/system/helix3/fields">
+
+                <field type="asset" />
+
+                <field name="favicon" type="media" preview="true" label="HELIX_FAVICON" description="HELIX_FAVICON_DESC" />
+
+                <field type="group" title="HELIX_LOGO" />
+
+                <!-- logo image -->
+                <field name="logo_image" class="child logotype logotype_image" type="media" preview="true" label="HELIX_LOGO_TYPE_IMAGE" description="HELIX_LOGO_TYPE_IMAGE_DESC" />
+                <field name="footer_logo_image" class="child logotype logotype_image" type="media" preview="true" label="Footer Logo Image" description="HELIX_LOGO_TYPE_IMAGE_DESC" />
+
+                <!-- logo text -->
+                <!--<field name="logo_text" class="child logotype logotype_text" type="text" label="HELIX_LOGO_TYPE_TEXT" description="HELIX_LOGO_TYPE_TEXT_DESC" />-->
+                <!--<field name="logo_slogan" class="child logotype logotype_text" type="text" label="HELIX_LOGO_SLOGAN" description="HELIX_LOGO_SLOGAN_DESC" />-->
+
+                <!-- Footer -->
+                <field type="group" title="HELIX_FOOTER" />
+                <field name="enabled_footer_menu" type="radio" class="parent copyright" default="1" label="Footer Menu" description="Display the mainmenu module in the footer.">
+                    <option value="1">HELIX_SHOW</option>
+                    <option value="0">HELIX_HIDE</option>
+                </field>
+                <field name="enabled_copyright" type="radio" class="parent copyright" default="1" label="HELIX_COPYRIGHT" description="HELIX_COPYRIGHT_DESC">
+                    <option value="1">HELIX_SHOW</option>
+                    <option value="0">HELIX_HIDE</option>
+                </field>
+                <field name="copyright" class="child copyright copyright_1" type="textarea" rows="6" cols="30" default="© 2015 Your Company. All Rights Reserved." label="HELIX_COMPYRIGHT_TEXT" description="HELIX_COMPYRIGHT_TEXT_DESC" filter="raw" />
+
+                <!--Social Icons-->
+                <field type="group" title="HELIX_SOCIAL_ICONS" />
+                <field name="show_social_icons" type="radio" default="1" label="HELIX_SOCIAL_ICONS" description="HELIX_SOCIAL_ICONS_DESC" class="parent social_icons">
+                    <option value="1">HELIX_SHOW</option>
+                    <option value="0">HELIX_HIDE</option>
+                </field>
+                <field name="facebook" type="text" label="HELIX_SOCIAL_ICON_FACEBOOK" default="" description="HELIX_SOCIAL_ICON_FACEBOOK_DESC" class="child social_icons social_icons_1" />
+                <field name="twitter" type="text" label="HELIX_SOCIAL_ICON_TWITTER" default="" description="HELIX_SOCIAL_ICON_TWITTER_DESC" class="child social_icons social_icons_1" />
+                <field name="googleplus" type="text" label="HELIX_SOCIAL_ICON_GOOGLEPLUS" default="" description="HELIX_SOCIAL_ICON_GOOGLEPLUS_DESC" class="child social_icons social_icons_1" />
+                <field name="linkedin" type="text" label="LinkedIn URL" default="" description="LinkedIn URL" class="child social_icons social_icons_1" />
+
+                <!--Contact Info-->
+                <!--<field type="group" title="HELIX_CONTACT_INFO" />
+                <field name="enable_contactinfo" type="radio" default="1" label="HELIX_ENABLE_CONTACT_INFO" description="HELIX_ENABLE_CONTACT_INFO_DESC" class="parent contactinfo">
+                    <option value="0">HELIX_NO</option>
+                    <option value="1">HELIX_YES</option>
+                </field>
+                <field name="contact_address" type="text" default="285 LEXINGTON AVE, NEW YORK, NY" label="Address" description="Add address here. Leave blank if no address is required." class="child contactinfo contactinfo_1" />
+                <field name="contact_phone" type="text" default="+228 872 4444" label="HELIX_CONTACT_PHONE" description="HELIX_CONTACT_PHONE_DESC" class="child contactinfo contactinfo_1" />
+                <field name="contact_email" type="email" default="contact@email.com" label="HELIX_CONTACT_EMAIL" description="HELIX_CONTACT_EMAIL_DESC" class="child contactinfo contactinfo_1" />-->
+
+            </fieldset>
+            <!--End Basic Tab-->
+
+            <!--Start Custom Code Tab-->
+            <fieldset name="custom_code">
+                <field type="group" title="HELIX_CUSTOM_CODE" />
+                <field name="before_head" type="textarea" rows="5" label="HELIX_BEFORE_HEAD" description="HELIX_BEFORE_HEAD_DESC" filter="raw" />
+                <field name="before_body" type="textarea" rows="5" label="HELIX_BEFORE_BODY" description="HELIX_BEFORE_BODY_DESC" filter="raw" />
+                <field name="custom_css" type="textarea" rows="5" label="HELIX_CUSTOM_CSS" description="HELIX_CUSTOM_CSS_DESC" filter="raw" />
+                <field name="custom_js" type="textarea" rows="5" label="HELIX_CUSTOM_JS" description="HELIX_CUSTOM_JS_DESC" filter="raw" />
+            </fieldset>
+            <!--End Custom Code Tab-->
+
+        </fields>
+    </config>
+</extension>
